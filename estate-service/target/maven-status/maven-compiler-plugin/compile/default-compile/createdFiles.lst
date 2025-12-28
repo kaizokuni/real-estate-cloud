@@ -1,0 +1,4 @@
+com\realestate\estate\entities\Property.class
+com\realestate\estate\DataLoader.class
+com\realestate\estate\EstateApplication.class
+com\realestate\estate\repositories\PropertyRepository.class

@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          # GitHub repository for centralized configuration
+          uri: ${GIT_REPO_URI:https://github.com/kaizokuni/real-estate-config-repo.git}
+          default-label: main
+          clone-on-start: true

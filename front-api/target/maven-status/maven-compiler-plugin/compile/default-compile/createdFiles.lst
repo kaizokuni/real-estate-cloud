@@ -1,0 +1,7 @@
+com\realestate\front\model\Property.class
+com\realestate\front\web\FrontApiController.class
+com\realestate\front\clients\ClientServiceClient.class
+com\realestate\front\FrontApiApplication.class
+com\realestate\front\clients\EstateClient.class
+com\realestate\front\model\Client.class
+com\realestate\front\model\Reservation.class

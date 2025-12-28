@@ -1,0 +1,7 @@
+com\realestate\client\entities\Reservation.class
+com\realestate\client\entities\Client.class
+com\realestate\client\repositories\ReservationRepository.class
+com\realestate\client\repositories\ClientRepository.class
+com\realestate\client\DataLoader.class
+com\realestate\client\ClientApplication.class
+com\realestate\client\controllers\ConfigTestController.class
