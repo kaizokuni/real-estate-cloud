@@ -1,9 +1,9 @@
 package com.realestate.front.web;
 
-import com.realestate.front.clients.ClientServiceClient;
-import com.realestate.front.clients.EstateClient;
-import com.realestate.front.model.Property;
-import com.realestate.front.model.Reservation;
+import com.realestate.front.clients.OrderServiceClient;
+import com.realestate.front.clients.ProductClient;
+import com.realestate.front.model.Order;
+import com.realestate.front.model.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,30 +12,32 @@ import java.util.List;
 @RestController
 public class FrontApiController {
 
-    private final ClientServiceClient clientClient;
-    private final EstateClient estateClient;
+    private final OrderServiceClient orderClient;
+    private final ProductClient productClient;
 
-    public FrontApiController(ClientServiceClient clientClient, EstateClient estateClient) {
-        this.clientClient = clientClient;
-        this.estateClient = estateClient;
+    public FrontApiController(OrderServiceClient orderClient, ProductClient productClient) {
+        this.orderClient = orderClient;
+        this.productClient = productClient;
     }
 
-    @GetMapping("/full-reservations")
-    public List<Reservation> getFullReservations() {
-        // 1. Get recent reservations from Client Service
-        List<Reservation> reservations = clientClient.getRecentReservations();
+    @GetMapping("/full-orders")
+    public List<Order> getFullOrders() {
+        // 1. Fetch recent orders from Order Service
+        List<Order> orders = orderClient.getRecentOrders();
 
-        // 2. Loop through them and fetch Property details for each
-        for (Reservation res : reservations) {
+        // 2. Enhance each order with Product details from Product Service
+        for (Order order : orders) {
             try {
-                Property prop = estateClient.getPropertyById(res.getPropertyId());
-                res.setPropertyDetails(prop); // Merge the data!
+                // Uses productId to find the matching Product
+                Product product = productClient.getProductById(order.getProductId());
+                order.setProductDetails(product);
             } catch (Exception e) {
-                // Property not found, leave propertyDetails null
-                System.out.println("Property " + res.getPropertyId() + " not found: " + e.getMessage());
+                // Graceful fallback if product service is down or product missing
+                System.err.println("Product " + order.getProductId() + " not found: " + e.getMessage());
+                // productDetails remains null
             }
         }
 
-        return reservations;
+        return orders;
     }
 }

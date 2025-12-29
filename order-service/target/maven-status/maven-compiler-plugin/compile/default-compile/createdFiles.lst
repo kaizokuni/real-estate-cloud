@@ -1,0 +1,7 @@
+com/realestate/order/DataLoader.class
+com/realestate/order/controllers/ConfigTestController.class
+com/realestate/order/OrderApplication.class
+com/realestate/order/entities/Client.class
+com/realestate/order/repositories/ClientRepository.class
+com/realestate/order/repositories/OrderRepository.class
+com/realestate/order/entities/Order.class

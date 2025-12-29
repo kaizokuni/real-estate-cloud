@@ -35,8 +35,8 @@
         <module>config-server</module>
         <module>discovery-service</module>
         <module>gateway-service</module>
-        <module>estate-service</module>
-        <module>client-service</module>
+        <module>product-service</module>
+        <module>order-service</module>
         <module>front-api</module>
     </modules>
 

@@ -1,5 +1,5 @@
 # Use a lightweight OpenJDK runtime
-FROM openjdk:17-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
 
 # Add a temporary volume
 VOLUME /tmp

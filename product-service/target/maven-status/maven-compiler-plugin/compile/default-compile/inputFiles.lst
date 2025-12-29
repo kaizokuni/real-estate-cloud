@@ -1,0 +1,4 @@
+/app/product-service/src/main/java/com/realestate/product/repositories/ProductRepository.java
+/app/product-service/src/main/java/com/realestate/product/entities/Product.java
+/app/product-service/src/main/java/com/realestate/product/DataLoader.java
+/app/product-service/src/main/java/com/realestate/product/ProductApplication.java

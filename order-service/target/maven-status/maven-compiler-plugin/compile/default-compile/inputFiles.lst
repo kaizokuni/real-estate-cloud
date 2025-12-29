@@ -1,0 +1,7 @@
+/app/order-service/src/main/java/com/realestate/order/OrderApplication.java
+/app/order-service/src/main/java/com/realestate/order/repositories/OrderRepository.java
+/app/order-service/src/main/java/com/realestate/order/controllers/ConfigTestController.java
+/app/order-service/src/main/java/com/realestate/order/entities/Client.java
+/app/order-service/src/main/java/com/realestate/order/repositories/ClientRepository.java
+/app/order-service/src/main/java/com/realestate/order/entities/Order.java
+/app/order-service/src/main/java/com/realestate/order/DataLoader.java

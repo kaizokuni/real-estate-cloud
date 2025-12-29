@@ -1,0 +1,4 @@
+com/realestate/product/entities/Product.class
+com/realestate/product/DataLoader.class
+com/realestate/product/ProductApplication.class
+com/realestate/product/repositories/ProductRepository.class
