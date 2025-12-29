@@ -12,3 +12,33 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        # Route pour l'authentification (PUBLIC - pas de filtre)
+        - id: auth-route
+          uri: lb://front-api
+          predicates:
+            - Path=/auth/**
+
+        # Route pour front-api (PROTÉGÉE)
+        - id: front-api
+          uri: lb://front-api
+          predicates:
+            - Path=/full-orders/**
+          filters:
+            - AuthenticationFilter
+
+        # Route pour order-service (PROTÉGÉE)
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/orders/**
+          filters:
+            - AuthenticationFilter
+
+        # Route pour product-service (PROTÉGÉE)
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/products/**
+          filters:
+            - AuthenticationFilter

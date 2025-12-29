@@ -1,7 +1,10 @@
 com/realestate/front/model/Client.class
+com/realestate/front/security/JwtUtil.class
 com/realestate/front/clients/ProductClient.class
 com/realestate/front/model/Product.class
 com/realestate/front/FrontApiApplication.class
+com/realestate/front/security/SecurityConfig.class
+com/realestate/front/web/AuthController.class
 com/realestate/front/web/FrontApiController.class
 com/realestate/front/clients/OrderServiceClient.class
 com/realestate/front/model/Order.class

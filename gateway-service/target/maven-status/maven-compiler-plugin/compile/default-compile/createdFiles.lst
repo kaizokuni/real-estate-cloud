@@ -1,1 +1,5 @@
+com/realestate/gateway/filter/JwtUtil.class
 com/realestate/gateway/GatewayApplication.class
+com/realestate/gateway/filter/AuthenticationFilter$Config.class
+com/realestate/gateway/filter/AuthenticationFilter.class
+com/realestate/gateway/filter/RouteValidator.class

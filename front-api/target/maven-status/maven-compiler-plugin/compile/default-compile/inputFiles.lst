@@ -3,5 +3,8 @@
 /app/front-api/src/main/java/com/realestate/front/FrontApiApplication.java
 /app/front-api/src/main/java/com/realestate/front/clients/OrderServiceClient.java
 /app/front-api/src/main/java/com/realestate/front/clients/ProductClient.java
+/app/front-api/src/main/java/com/realestate/front/security/JwtUtil.java
+/app/front-api/src/main/java/com/realestate/front/web/AuthController.java
 /app/front-api/src/main/java/com/realestate/front/model/Product.java
 /app/front-api/src/main/java/com/realestate/front/model/Client.java
+/app/front-api/src/main/java/com/realestate/front/security/SecurityConfig.java

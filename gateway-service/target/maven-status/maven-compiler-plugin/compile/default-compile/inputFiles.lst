@@ -1,1 +1,4 @@
+/app/gateway-service/src/main/java/com/realestate/gateway/filter/RouteValidator.java
+/app/gateway-service/src/main/java/com/realestate/gateway/filter/AuthenticationFilter.java
 /app/gateway-service/src/main/java/com/realestate/gateway/GatewayApplication.java
+/app/gateway-service/src/main/java/com/realestate/gateway/filter/JwtUtil.java
